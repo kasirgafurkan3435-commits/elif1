@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+<meta name="description" content="Elif için özel bir aşk sitesi - Bizim hikayemiz">
+<meta name="theme-color" content="#d63384">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Elif & Ben 💕 - Bizim Hikayemiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffeef7 0%, #ffd6e8 50%, #ffeef7 100%);
+        color: #4a0033;
+        min-height: 100vh;
+        padding: 20px;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .header {
+        text-align: center;
+        padding: 60px 20px 40px;
+        animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 48px;
+        font-weight: 700;
+        color: #d63384;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #8b4a6b;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
+    .gallery {
+        width: 100%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(214, 51, 132, 0.2);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: fadeInUp 0.8s ease-out backwards;
+        cursor: pointer;
+    }
+
+    .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+    .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+    .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+    .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .gallery-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(214, 51, 132, 0.1) 0%, rgba(255, 182, 193, 0.1) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .gallery-item:hover::before {
+        opacity: 1;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+        border-radius: 20px;
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(214, 51, 132, 0.35);
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .message-box {
+        margin: 60px auto;
+        width: 90%;
+        max-width: 800px;
+        background: linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+        padding: 50px 40px;
+        border-radius: 25px;
+        font-size: 20px;
+        line-height: 1.8;
+        box-shadow: 0 10px 40px rgba(214, 51, 132, 0.2);
+        border: 2px solid rgba(214, 51, 132, 0.1);
+        position: relative;
+        overflow: hidden;
+        animation: fadeIn 1.2s ease-out 0.5s backwards;
+    }
+
+    .message-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(214, 51, 132, 0.05) 0%, transparent 70%);
+        animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .message-content {
+        position: relative;
+        z-index: 1;
+        color: #4a0033;
+        font-weight: 400;
+    }
+
+    .message-content p {
+        margin-bottom: 15px;
+    }
+
+    .message-content p:last-child {
+        margin-bottom: 0;
+        font-size: 22px;
+        color: #d63384;
+        font-weight: 500;
+    }
+
+    .heart {
+        display: inline-block;
+        animation: heartbeat 1.5s ease-in-out infinite;
+        margin: 0 5px;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+
+    .floating-hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .heart-float {
+        position: absolute;
+        font-size: 20px;
+        opacity: 0.3;
+        animation: float 15s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.3;
+        }
+        90% {
+            opacity: 0.3;
+        }
+        100% {
+            transform: translateY(-100px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .header {
+            padding: 40px 15px 30px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+        }
+
+        .gallery {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 10px;
+            margin: 30px auto;
+        }
+
+        .message-box {
+            padding: 30px 25px;
+            font-size: 18px;
+            margin: 40px auto;
+        }
+
+        .message-content p:last-child {
+            font-size: 20px;
+        }
+    }
+
+    /* MP3 Player Styles */
+    .music-player {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+        padding: 12px 25px;
+        border-radius: 60px;
+        box-shadow: 0 10px 40px rgba(214, 51, 132, 0.35);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        z-index: 1000;
+        border: 2px solid rgba(214, 51, 132, 0.2);
+        backdrop-filter: blur(15px);
+        animation: slideUp 1s ease-out 1.5s backwards;
+        max-width: 95%;
+        transition: all 0.3s ease;
+    }
+
+    .music-player:hover {
+        box-shadow: 0 12px 50px rgba(214, 51, 132, 0.45);
+        transform: translateX(-50%) translateY(-5px);
+    }
+
+    .album-cover {
+        width: 55px;
+        height: 55px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+        border: 2px solid rgba(214, 51, 132, 0.2);
+        animation: rotateCover 20s linear infinite paused;
+        flex-shrink: 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    .album-cover.playing {
+        animation-play-state: running;
+    }
+
+    .album-cover.paused {
+        animation-play-state: paused;
+    }
+
+    @keyframes rotateCover {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .album-cover:hover {
+        transform: scale(1.15) rotate(5deg);
+        box-shadow: 0 6px 25px rgba(214, 51, 132, 0.5);
+        border-color: rgba(214, 51, 132, 0.4);
+    }
+
+    .album-cover:active {
+        transform: scale(1.05);
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+
+    .play-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .play-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .play-btn:hover::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .play-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(214, 51, 132, 0.6);
+    }
+
+    .play-btn:active {
+        transform: scale(0.95);
+    }
+
+    .play-btn.playing {
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .play-btn span {
+        position: relative;
+        z-index: 1;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+        }
+        50% {
+            box-shadow: 0 4px 25px rgba(214, 51, 132, 0.7);
+        }
+    }
+
+    .music-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 0;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .music-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #d63384;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: 0.3px;
+    }
+
+    .music-status {
+        font-size: 12px;
+        color: #8b4a6b;
+        font-weight: 400;
+    }
+
+    .music-progress {
+        width: 100%;
+        height: 3px;
+        background: rgba(214, 51, 132, 0.15);
+        border-radius: 2px;
+        margin-top: 5px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .music-progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #d63384 0%, #ff6b9d 100%);
+        border-radius: 2px;
+        width: 0%;
+        transition: width 0.1s linear;
+        position: relative;
+    }
+
+    .music-progress-bar::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: #d63384;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(214, 51, 132, 0.5);
+    }
+
+    .volume-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .volume-slider {
+        width: 80px;
+        height: 4px;
+        background: rgba(214, 51, 132, 0.2);
+        border-radius: 2px;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #d63384;
+        cursor: pointer;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #d63384;
+        cursor: pointer;
+        border: none;
+    }
+
+    audio {
+        display: none;
+    }
+
+    /* Lightbox for images */
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .lightbox.active {
+        display: flex;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 15px;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .lightbox-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: rotate(90deg);
+    }
+
+    /* Scroll to top button */
+    .scroll-top {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+        border-radius: 50%;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .scroll-top.visible {
+        display: flex;
+    }
+
+    .scroll-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(214, 51, 132, 0.5);
+    }
+
+    @media (max-width: 768px) {
+        .music-player {
+            padding: 10px 18px;
+            gap: 12px;
+            bottom: 15px;
+            border-radius: 50px;
+        }
+
+        .album-cover {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+        }
+
+        .play-btn {
+            width: 44px;
+            height: 44px;
+            font-size: 16px;
+        }
+
+        .music-title {
+            font-size: 13px;
+        }
+
+        .music-status {
+            font-size: 11px;
+        }
+
+        .volume-slider {
+            width: 60px;
+        }
+
+        .music-progress {
+            height: 2.5px;
+        }
+
+        .lightbox-close {
+            top: 15px;
+            right: 20px;
+            font-size: 35px;
+            width: 45px;
+            height: 45px;
+        }
+
+        .scroll-top {
+            width: 45px;
+            height: 45px;
+            font-size: 18px;
+            bottom: 90px;
+            right: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            padding: 8px;
+        }
+
+        .container {
+            padding: 0 5px;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .header {
+            padding: 30px 10px 25px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .gallery {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            padding: 8px;
+            margin: 25px auto;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            min-height: 200px;
+        }
+
+        .gallery-item img {
+            border-radius: 15px;
+            min-height: 200px;
+            object-fit: cover;
+        }
+
+        .message-box {
+            padding: 25px 18px;
+            font-size: 16px;
+            margin: 30px auto;
+            border-radius: 20px;
+            width: 95%;
+        }
+
+        .message-content {
+            line-height: 1.6;
+        }
+
+        .message-content p {
+            margin-bottom: 12px;
+        }
+
+        .message-content p:last-child {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        .music-player {
+            padding: 10px 12px;
+            gap: 8px;
+            border-radius: 45px;
+            bottom: 10px;
+            max-width: 98%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .album-cover {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            min-width: 42px;
+            min-height: 42px;
+        }
+
+        .play-btn {
+            width: 42px;
+            height: 42px;
+            font-size: 14px;
+            min-width: 42px;
+            min-height: 42px;
+            touch-action: manipulation;
+        }
+
+        .music-info {
+            gap: 3px;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .music-title {
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .music-status {
+            font-size: 9px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .volume-control {
+            display: none;
+        }
+
+        .music-progress {
+            height: 2px;
+            margin-top: 3px;
+            touch-action: manipulation;
+        }
+
+        .lightbox-close {
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .scroll-top {
+            width: 44px;
+            height: 44px;
+            font-size: 16px;
+            bottom: 75px;
+            right: 12px;
+            touch-action: manipulation;
+        }
+
+        .floating-hearts .heart-float {
+            font-size: 16px;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 85%;
+        }
+
+        .lightbox-close {
+            width: 44px;
+            height: 44px;
+            font-size: 32px;
+            touch-action: manipulation;
+        }
+    }
+
+    /* Touch optimizations */
+    @media (hover: none) and (pointer: coarse) {
+        .gallery-item {
+            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.2);
+            touch-action: manipulation;
+        }
+
+        .gallery-item:active {
+            transform: scale(0.98);
+        }
+
+        .play-btn {
+            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.3);
+            touch-action: manipulation;
+        }
+
+        .play-btn:active {
+            transform: scale(0.9);
+        }
+
+        .album-cover {
+            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.2);
+            touch-action: manipulation;
+        }
+
+        .album-cover:active {
+            transform: scale(0.95);
+        }
+
+        .memory-card {
+            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.1);
+            touch-action: manipulation;
+        }
+
+        .memory-card:active {
+            transform: translateY(-5px) scale(0.98);
+        }
+
+        .scroll-top {
+            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.3);
+            touch-action: manipulation;
+        }
+
+        .lightbox-close {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+            touch-action: manipulation;
+        }
+
+        /* Ensure minimum touch target size (44x44px) */
+        button, .gallery-item, .album-cover, .scroll-top, .lightbox-close {
+            min-height: 44px;
+            min-width: 44px;
+        }
+    }
+
+    /* Performance optimizations */
+    .gallery-item img {
+        will-change: transform;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
+    .gallery-item {
+        will-change: transform;
+    }
+
+    /* Loading animation */
+    .gallery-item img {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            background-position: 200% 0;
+        }
+        100% {
+            background-position: -200% 0;
+        }
+    }
+
+    .gallery-item img[src] {
+        background: none;
+        animation: none;
+    }
+
+    /* Smooth image loading */
+    img {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    img.loaded {
+        opacity: 1;
+    }
+
+    /* Better scroll performance */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Optimize animations for mobile */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* Additional Content Sections */
+    .intro-section {
+        margin: 60px auto;
+        max-width: 800px;
+        padding: 40px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 240, 246, 0.9) 100%);
+        border-radius: 25px;
+        box-shadow: 0 10px 40px rgba(214, 51, 132, 0.15);
+        text-align: center;
+        animation: fadeInUp 1s ease-out 0.3s backwards;
+        border: 2px solid rgba(214, 51, 132, 0.1);
+    }
+
+    .intro-section h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 36px;
+        color: #d63384;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .intro-section p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #4a0033;
+        margin-bottom: 15px;
+    }
+
+    .memories-section {
+        margin: 60px auto;
+        max-width: 1000px;
+        padding: 50px 30px;
+        background: linear-gradient(135deg, #fff0f6 0%, #ffeef7 100%);
+        border-radius: 30px;
+        box-shadow: 0 15px 50px rgba(214, 51, 132, 0.2);
+        animation: fadeIn 1.2s ease-out 0.6s backwards;
+        border: 2px solid rgba(214, 51, 132, 0.15);
+    }
+
+    .memories-section h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 42px;
+        color: #d63384;
+        text-align: center;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .memory-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .memory-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(214, 51, 132, 0.15);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 2px solid rgba(214, 51, 132, 0.1);
+        animation: fadeInUp 0.8s ease-out backwards;
+    }
+
+    .memory-card:nth-child(1) { animation-delay: 0.1s; }
+    .memory-card:nth-child(2) { animation-delay: 0.2s; }
+    .memory-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .memory-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(214, 51, 132, 0.3);
+        border-color: rgba(214, 51, 132, 0.3);
+    }
+
+    .memory-card h3 {
+        font-size: 24px;
+        color: #d63384;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .memory-card p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #4a0033;
+    }
+
+    .apology-section {
+        margin: 60px auto;
+        max-width: 900px;
+        padding: 50px 40px;
+        background: linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+        border-radius: 30px;
+        box-shadow: 0 15px 50px rgba(214, 51, 132, 0.25);
+        text-align: center;
+        animation: fadeIn 1.4s ease-out 0.9s backwards;
+        border: 3px solid rgba(214, 51, 132, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .apology-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(214, 51, 132, 0.08) 0%, transparent 70%);
+        animation: rotate 25s linear infinite;
+    }
+
+    .apology-section h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 44px;
+        color: #d63384;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1;
+    }
+
+    .apology-section .apology-text {
+        font-size: 20px;
+        line-height: 2;
+        color: #4a0033;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .apology-section .apology-text:last-child {
+        font-size: 24px;
+        color: #d63384;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    .wishes-section {
+        margin: 60px auto;
+        max-width: 800px;
+        padding: 45px;
+        background: linear-gradient(135deg, rgba(255, 240, 246, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+        border-radius: 25px;
+        box-shadow: 0 12px 45px rgba(214, 51, 132, 0.2);
+        animation: fadeInUp 1s ease-out 1.2s backwards;
+        border: 2px solid rgba(214, 51, 132, 0.15);
+    }
+
+    .wishes-section h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 38px;
+        color: #d63384;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .wishes-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .wishes-list li {
+        font-size: 18px;
+        line-height: 2;
+        color: #4a0033;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        position: relative;
+        animation: slideInLeft 0.6s ease-out backwards;
+    }
+
+    .wishes-list li:nth-child(1) { animation-delay: 1.3s; }
+    .wishes-list li:nth-child(2) { animation-delay: 1.4s; }
+    .wishes-list li:nth-child(3) { animation-delay: 1.5s; }
+    .wishes-list li:nth-child(4) { animation-delay: 1.6s; }
+
+    .wishes-list li::before {
+        content: '💕';
+        position: absolute;
+        left: 0;
+        font-size: 24px;
+        animation: heartbeat 2s ease-in-out infinite;
+    }
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .final-message {
+        margin: 80px auto;
+        max-width: 700px;
+        padding: 50px;
+        background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+        border-radius: 30px;
+        box-shadow: 0 15px 50px rgba(214, 51, 132, 0.4);
+        text-align: center;
+        color: white;
+        animation: fadeIn 1.6s ease-out 1.7s backwards;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .final-message::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        animation: rotate 30s linear infinite;
+    }
+
+    .final-message h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 48px;
+        margin-bottom: 25px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        position: relative;
+        z-index: 1;
+    }
+
+    .final-message p {
+        font-size: 22px;
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+        .intro-section, .memories-section, .apology-section, .wishes-section, .final-message {
+            margin: 35px auto;
+            padding: 30px 25px;
+            width: 95%;
+        }
+
+        .intro-section h2, .memories-section h2, .apology-section h2, .wishes-section h2 {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+        .final-message h2 {
+            font-size: 36px;
+            line-height: 1.2;
+        }
+
+        .intro-section p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .memory-cards {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .memory-card {
+            padding: 25px;
+        }
+
+        .memory-card h3 {
+            font-size: 22px;
+        }
+
+        .memory-card p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .apology-section .apology-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .wishes-list li {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            padding-left: 35px;
+        }
+
+        .final-message p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .intro-section, .memories-section, .apology-section, .wishes-section, .final-message {
+            padding: 22px 18px;
+            margin: 25px auto;
+            width: 98%;
+            border-radius: 20px;
+        }
+
+        .intro-section h2, .memories-section h2, .apology-section h2, .wishes-section h2 {
+            font-size: 26px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .final-message h2 {
+            font-size: 28px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .apology-section .apology-text {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .memory-card {
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .memory-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .memory-card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .wishes-list li {
+            font-size: 14px;
+            padding-left: 32px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .wishes-list li::before {
+            font-size: 20px;
+        }
+
+        .final-message p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .memories-section {
+            padding: 30px 20px;
+        }
+
+        .memory-cards {
+            gap: 15px;
+            margin-top: 25px;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="floating-hearts">
+        <div class="heart-float" style="left: 10%; animation-delay: 0s;">💗</div>
+        <div class="heart-float" style="left: 20%; animation-delay: 2s;">💕</div>
+        <div class="heart-float" style="left: 30%; animation-delay: 4s;">💖</div>
+        <div class="heart-float" style="left: 40%; animation-delay: 1s;">💗</div>
+        <div class="heart-float" style="left: 50%; animation-delay: 3s;">💕</div>
+        <div class="heart-float" style="left: 60%; animation-delay: 5s;">💖</div>
+        <div class="heart-float" style="left: 70%; animation-delay: 2.5s;">💗</div>
+        <div class="heart-float" style="left: 80%; animation-delay: 4.5s;">💕</div>
+        <div class="heart-float" style="left: 90%; animation-delay: 1.5s;">💖</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Elif<span class="heart">💗</span></h1>
+            <p class="subtitle">Seni Seviyorum 💕</p>
+        </div>
+
+<div class="gallery">
+            <div class="gallery-item">
+                <img src="166b236b22dd3e6308b4fa65dada2c82.jpg" alt="Anı">
+            </div>
+            <div class="gallery-item">
+                <img src="3d0926f319f1e7c6a43bce8715fd437c.jpg" alt="Anı">
+            </div>
+            <div class="gallery-item">
+                <img src="802f056acbeb9b802c20fa881c5ff9f8.jpg" alt="Anı">
+            </div>
+            <div class="gallery-item">
+                <img src="bb65da8b037f0c7f5205ca0e8d38093d.jpg" alt="Anı">
+            </div>
+            <div class="gallery-item">
+                <img src="c313d5d5299528347e1c4d910a0aff55.jpg" alt="Anı">
+            </div>
+            <div class="gallery-item">
+                <img src="indir.jpg" alt="Anı">
+            </div>
+</div>
+
+<div class="message-box">
+            <div class="message-content">
+                <p>Seninle birlikte olmak beni çok mutlu ediyor 💕</p>
+                <p>Her gün seninle geçirdiğim zamanlar hayatıma anlam katıyor.</p>
+                <p>Sen benim için çok özelsin ve seni çok seviyorum <span class="heart">💗</span></p>
+            </div>
+        </div>
+
+        <!-- Intro Section -->
+        <div class="intro-section">
+            <h2>Merhaba Canım 💗</h2>
+            <p>Bu sayfayı senin için özel olarak hazırladım. Birlikte olduğumuz için çok mutluyum!</p>
+            <p>Birlikte geçirdiğimiz her anı, her gülüşü, her konuşmayı çok seviyorum. Sen hayatımın en güzel hediyesisin.</p>
+        </div>
+
+        <!-- Memories Section -->
+        <div class="memories-section">
+            <h2>Güzel Anılarımız 💕</h2>
+            <div class="memory-cards">
+                <div class="memory-card">
+                    <h3>💖 İlk Tanışma</h3>
+                    <p>Seninle tanıştığımız o ilk anı hiç unutmayacağım. Hayatıma renk kattın ve her şeyi daha güzel yaptın.</p>
+                </div>
+                <div class="memory-card">
+                    <h3>🌟 Birlikte Geçirdiğimiz Zamanlar</h3>
+                    <p>Her konuşmamız, her gülüşümüz, her paylaştığımız an bana çok değerli. Seninle olmak beni mutlu ediyor.</p>
+                </div>
+                <div class="memory-card">
+                    <h3>💫 Seninle Olmak</h3>
+                    <p>Seninle olduğumda kendimi tamamlanmış hissediyorum. Sen benim için çok özelsin.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Love Section -->
+        <div class="apology-section love-section">
+            <h2>Seni Neden Seviyorum? 💕</h2>
+            <div class="apology-text">
+                Seninle olduğumda kendimi en mutlu insan gibi hissediyorum. Her gülüşün, her bakışın kalbimi eritiyor.
+            </div>
+            <div class="apology-text">
+                Sen benim için sadece bir sevgili değilsin, aynı zamanda en iyi arkadaşım, en büyük destekçim ve hayatımın anlamısın.
+            </div>
+            <div class="apology-text">
+                Seninle birlikte geçirdiğim her anı hazine gibi saklıyorum. Birlikte güldüğümüz, konuştuğumuz, paylaştığımız her şey çok değerli.
+            </div>
+            <div class="apology-text">
+                Seni sevmek, seninle olmak benim için dünyanın en güzel duygusu. <span class="heart">💗</span>
+            </div>
+        </div>
+
+        <!-- Wishes Section -->
+        <div class="wishes-section">
+            <h2>Birlikte Hayallerimiz 🌟</h2>
+            <ul class="wishes-list">
+                <li>Birlikte daha nice güzel anılar biriktirmek</li>
+                <li>Seni her gün mutlu etmek ve yanında olmak</li>
+                <li>Birlikte hayallerimizi gerçekleştirmek</li>
+                <li>Seninle sonsuza kadar mutlu olmak</li>
+            </ul>
+        </div>
+
+        <!-- Special Moments Section -->
+        <div class="memories-section" style="margin-top: 40px;">
+            <h2>Özel Anılarımız 💫</h2>
+            <div class="memory-cards">
+                <div class="memory-card">
+                    <h3>🌹 İlk Buluşmamız</h3>
+                    <p>O ilk buluşmamızı hiç unutmayacağım. Seninle tanıştığım o an hayatımın en güzel anlarından biriydi.</p>
+                </div>
+                <div class="memory-card">
+                    <h3>💝 Birlikte Gülüşlerimiz</h3>
+                    <p>Seninle güldüğümüz her anı çok seviyorum. Senin gülüşün beni mutlu ediyor.</p>
+                </div>
+                <div class="memory-card">
+                    <h3>✨ Geleceğimiz</h3>
+                    <p>Seninle birlikte kurduğumuz hayaller, birlikte geçireceğimiz güzel günler beni heyecanlandırıyor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div class="final-message">
+            <h2>Seni Sonsuza Kadar Seveceğim 💕</h2>
+            <p>Elif, sen benim için çok özelsin. Bu sayfayı hazırlarken seni düşündüm ve ne kadar mutlu olduğumu fark ettim.</p>
+            <p>Seninle birlikte olmak, seninle geçirdiğim her an benim için çok değerli. Seni sevmek hayatımın en güzel parçası. <span class="heart">💗</span></p>
+            <p style="margin-top: 20px; font-size: 20px;">Birlikte nice mutlu günler geçirelim! 💕</p>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <img src="indir.jpg" alt="Albüm Kapağı" class="album-cover paused" id="albumCover">
+        <button class="play-btn" id="playBtn" aria-label="Oynat/Duraklat">
+            <span id="playIcon">▶</span>
+        </button>
+        <div class="music-info">
+            <div class="music-title">🎵 Mavi Yan Benimle</div>
+            <div class="music-status" id="musicStatus">Duraklatıldı</div>
+            <div class="music-progress">
+                <div class="music-progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+        <div class="volume-control">
+            <span style="font-size: 14px;">🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+        </div>
+        <audio id="audioPlayer" loop>
+            <source src="Mavi-Yan-Benimle-95.mp3" type="audio/mpeg">
+            Tarayıcınız ses oynatmayı desteklemiyor.
+        </audio>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Yukarı çık">
+        ↑
+    </button>
+
+    <!-- Lightbox for Images -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img id="lightboxImg" src="" alt="Büyük görüntü">
+</div>
+
+    <script>
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Music Player Functionality
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const musicStatus = document.getElementById('musicStatus');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const albumCover = document.getElementById('albumCover');
+        const progressBar = document.getElementById('progressBar');
+
+        // Set initial volume
+        audioPlayer.volume = volumeSlider.value / 100;
+
+        // Update progress bar
+        audioPlayer.addEventListener('timeupdate', function() {
+            if (audioPlayer.duration) {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressBar.style.width = progress + '%';
+            }
+        });
+
+        // Click/Touch on progress bar to seek
+        const progressContainer = document.querySelector('.music-progress');
+        let isDragging = false;
+
+        function seekToPosition(e) {
+            const rect = progressContainer.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clickX = clientX - rect.left;
+            const percentage = Math.max(0, Math.min(1, clickX / rect.width));
+            if (audioPlayer.duration) {
+                audioPlayer.currentTime = percentage * audioPlayer.duration;
+            }
+        }
+
+        progressContainer.addEventListener('click', seekToPosition);
+        progressContainer.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            seekToPosition(e);
+            e.preventDefault();
+        }, { passive: false });
+
+        progressContainer.addEventListener('touchmove', function(e) {
+            if (isDragging) {
+                seekToPosition(e);
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        progressContainer.addEventListener('touchend', function() {
+            isDragging = false;
+        });
+
+        function togglePlay() {
+            if (audioPlayer.paused) {
+                audioPlayer.play().then(() => {
+                    playIcon.textContent = '⏸';
+                    musicStatus.textContent = 'Çalıyor';
+                    playBtn.classList.add('playing');
+                    albumCover.classList.remove('paused');
+                    albumCover.classList.add('playing');
+                }).catch(err => {
+                    console.log('Ses oynatılamadı:', err);
+                    musicStatus.textContent = 'Oynatılamadı - Şarkı dosyasını kontrol edin';
+                });
+            } else {
+                audioPlayer.pause();
+                playIcon.textContent = '▶';
+                musicStatus.textContent = 'Duraklatıldı';
+                playBtn.classList.remove('playing');
+                albumCover.classList.remove('playing');
+                albumCover.classList.add('paused');
+            }
+        }
+
+        playBtn.addEventListener('click', togglePlay);
+        
+        // Click on album cover to play/pause
+        albumCover.addEventListener('click', togglePlay);
+
+        volumeSlider.addEventListener('input', function() {
+            audioPlayer.volume = this.value / 100;
+        });
+
+        audioPlayer.addEventListener('ended', function() {
+            playIcon.textContent = '▶';
+            musicStatus.textContent = 'Bitti';
+            playBtn.classList.remove('playing');
+            albumCover.classList.remove('playing');
+            albumCover.classList.add('paused');
+        });
+
+        // Update time display
+        audioPlayer.addEventListener('loadedmetadata', function() {
+            const duration = formatTime(audioPlayer.duration);
+            musicStatus.textContent = `0:00 / ${duration}`;
+        });
+
+        audioPlayer.addEventListener('timeupdate', function() {
+            if (audioPlayer.duration) {
+                const current = formatTime(audioPlayer.currentTime);
+                const duration = formatTime(audioPlayer.duration);
+                musicStatus.textContent = `${current} / ${duration}`;
+            }
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+
+        galleryItems.forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', function() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Keyboard support for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add click effect to gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Don't trigger if clicking on image (lightbox handles it)
+                if (e.target.tagName !== 'IMG') {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                }
+            });
+        });
+
+        // Optimized parallax effect on scroll
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const header = document.querySelector('.header');
+                    if (header && scrolled < 500) {
+                        header.style.transform = `translateY(${scrolled * 0.2}px)`;
+                        header.style.opacity = Math.max(0.3, 1 - scrolled / 500);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Image loading optimization
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            // Add loading="lazy" for better performance
+            if (!img.hasAttribute('loading')) {
+                img.setAttribute('loading', 'lazy');
+            }
+            
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                }, { once: true });
+                img.addEventListener('error', function() {
+                    this.style.opacity = '1';
+                    this.alt = 'Görüntü yüklenemedi';
+                }, { once: true });
+            }
+        });
+
+        // Lazy loading for images (performance)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '50px'
+            });
+
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Touch gesture support for mobile
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(e) {
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartY - touchEndY;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe up - could add functionality
+                } else {
+                    // Swipe down - could add functionality
+                }
+            }
+        }
+
+        // Prevent zoom on double tap for mobile (only on non-interactive elements)
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            // Don't prevent default on interactive elements
+            if (event.target.tagName === 'BUTTON' || 
+                event.target.tagName === 'INPUT' || 
+                event.target.closest('button') || 
+                event.target.closest('input') ||
+                event.target.closest('.gallery-item') ||
+                event.target.closest('.music-player')) {
+                return;
+            }
+            
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+
+        // Preload audio for better performance
+        audioPlayer.preload = 'auto';
+        audioPlayer.load();
+
+        // Optimize scroll performance
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = window.requestAnimationFrame(function() {
+                // Scroll handling code
+            });
+        }, { passive: true });
+
+        // Service Worker registration for offline support (optional)
+        if ('serviceWorker' in navigator) {
+            // Can be added later for offline support
+        }
+
+        // Performance monitoring
+        if ('PerformanceObserver' in window) {
+            try {
+                const perfObserver = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        // Monitor performance if needed
+                    }
+                });
+                perfObserver.observe({ entryTypes: ['navigation', 'resource'] });
+            } catch (e) {
+                // Silently fail if not supported
+            }
+        }
+
+        // Optimize gallery item interactions
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('touchstart', function() {
+                this.style.willChange = 'transform';
+            }, { passive: true });
+            
+            item.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.willChange = 'auto';
+                }, 300);
+            }, { passive: true });
+
+            // Prevent image drag on mobile
+            const img = item.querySelector('img');
+            if (img) {
+                img.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                });
+            }
+        });
+
+        // Mobile-specific optimizations
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Reduce animation complexity on mobile for better performance
+            const style = document.createElement('style');
+            style.textContent = `
+                @media (max-width: 768px) {
+                    .floating-hearts .heart-float {
+                        animation-duration: 20s;
+                    }
+                    .message-box::before,
+                    .apology-section::before,
+                    .final-message::before {
+                        animation-duration: 40s;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Optimize scroll performance
+            let scrollTimeout;
+            const optimizedScroll = function() {
+                if (scrollTimeout) {
+                    cancelAnimationFrame(scrollTimeout);
+                }
+                scrollTimeout = requestAnimationFrame(function() {
+                    // Scroll handling
+                });
+            };
+            window.addEventListener('scroll', optimizedScroll, { passive: true });
+        }
+    </script>
+</body>
+</html>
