@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
 <meta name="description" content="Elif için özel bir aşk sitesi - Bizim hikayemiz">
-<meta name="theme-color" content="#d63384">
+<meta name="theme-color" content="#8b5cf6">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Elif & Ben 💕 - Bizim Hikayemiz</title>
@@ -21,7 +21,9 @@
 
     body {
         font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #ffeef7 0%, #ffd6e8 50%, #ffeef7 100%);
+        background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #ddd6fe 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 8s ease infinite;
         color: #4a0033;
         min-height: 100vh;
         padding: 20px;
@@ -47,6 +49,41 @@
         }
     }
 
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes progressGlow {
+        0%, 100% {
+            background-position: 0% 50%;
+            opacity: 1;
+        }
+        50% {
+            background-position: 100% 50%;
+            opacity: 0.8;
+        }
+    }
+
     .header {
         text-align: center;
         padding: 60px 20px 40px;
@@ -68,7 +105,7 @@
         font-family: "Dancing Script", cursive;
         font-size: 48px;
         font-weight: 700;
-        color: #d63384;
+        color: #8b5cf6;
         margin-bottom: 15px;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         letter-spacing: 1px;
@@ -94,7 +131,7 @@
         position: relative;
         overflow: hidden;
         border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(214, 51, 132, 0.2);
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         animation: fadeInUp 0.8s ease-out backwards;
         cursor: pointer;
@@ -125,7 +162,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, rgba(214, 51, 132, 0.1) 0%, rgba(255, 182, 193, 0.1) 100%);
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(255, 182, 193, 0.1) 100%);
         opacity: 0;
         transition: opacity 0.3s ease;
         z-index: 1;
@@ -150,7 +187,7 @@
 
     .gallery-item:hover {
         transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 40px rgba(214, 51, 132, 0.35);
+        box-shadow: 0 15px 40px rgba(139, 92, 246, 0.35);
     }
 
     .gallery-item:hover img {
@@ -161,13 +198,13 @@
         margin: 60px auto;
         width: 90%;
         max-width: 800px;
-        background: linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
         padding: 50px 40px;
         border-radius: 25px;
         font-size: 20px;
         line-height: 1.8;
-        box-shadow: 0 10px 40px rgba(214, 51, 132, 0.2);
-        border: 2px solid rgba(214, 51, 132, 0.1);
+        box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+        border: 2px solid rgba(139, 92, 246, 0.1);
         position: relative;
         overflow: hidden;
         animation: fadeIn 1.2s ease-out 0.5s backwards;
@@ -180,7 +217,7 @@
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(214, 51, 132, 0.05) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
         animation: rotate 20s linear infinite;
     }
 
@@ -207,7 +244,7 @@
     .message-content p:last-child {
         margin-bottom: 0;
         font-size: 22px;
-        color: #d63384;
+        color: #8b5cf6;
         font-weight: 500;
     }
 
@@ -301,15 +338,15 @@
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
-        background: linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
         padding: 12px 25px;
         border-radius: 60px;
-        box-shadow: 0 10px 40px rgba(214, 51, 132, 0.35);
+        box-shadow: 0 10px 40px rgba(139, 92, 246, 0.35);
         display: flex;
         align-items: center;
         gap: 15px;
         z-index: 1000;
-        border: 2px solid rgba(214, 51, 132, 0.2);
+        border: 2px solid rgba(139, 92, 246, 0.2);
         backdrop-filter: blur(15px);
         animation: slideUp 1s ease-out 1.5s backwards;
         max-width: 95%;
@@ -317,7 +354,7 @@
     }
 
     .music-player:hover {
-        box-shadow: 0 12px 50px rgba(214, 51, 132, 0.45);
+        box-shadow: 0 12px 50px rgba(139, 92, 246, 0.45);
         transform: translateX(-50%) translateY(-5px);
     }
 
@@ -326,8 +363,8 @@
         height: 55px;
         border-radius: 12px;
         object-fit: cover;
-        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
-        border: 2px solid rgba(214, 51, 132, 0.2);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        border: 2px solid rgba(139, 92, 246, 0.2);
         animation: rotateCover 20s linear infinite paused;
         flex-shrink: 0;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -356,8 +393,8 @@
 
     .album-cover:hover {
         transform: scale(1.15) rotate(5deg);
-        box-shadow: 0 6px 25px rgba(214, 51, 132, 0.5);
-        border-color: rgba(214, 51, 132, 0.4);
+        box-shadow: 0 6px 25px rgba(139, 92, 246, 0.5);
+        border-color: rgba(139, 92, 246, 0.4);
     }
 
     .album-cover:active {
@@ -379,7 +416,9 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+        background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+        background-size: 200% 200%;
+        animation: shimmer 3s ease-in-out infinite;
         border: none;
         color: white;
         font-size: 18px;
@@ -388,7 +427,7 @@
         align-items: center;
         justify-content: center;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
         flex-shrink: 0;
         position: relative;
         overflow: hidden;
@@ -414,7 +453,7 @@
 
     .play-btn:hover {
         transform: scale(1.1);
-        box-shadow: 0 6px 25px rgba(214, 51, 132, 0.6);
+        box-shadow: 0 6px 25px rgba(139, 92, 246, 0.6);
     }
 
     .play-btn:active {
@@ -432,10 +471,10 @@
 
     @keyframes pulse {
         0%, 100% {
-            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
         }
         50% {
-            box-shadow: 0 4px 25px rgba(214, 51, 132, 0.7);
+            box-shadow: 0 4px 25px rgba(139, 92, 246, 0.7);
         }
     }
 
@@ -451,7 +490,7 @@
     .music-title {
         font-size: 15px;
         font-weight: 600;
-        color: #d63384;
+        color: #8b5cf6;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -467,7 +506,7 @@
     .music-progress {
         width: 100%;
         height: 3px;
-        background: rgba(214, 51, 132, 0.15);
+        background: rgba(139, 92, 246, 0.15);
         border-radius: 2px;
         margin-top: 5px;
         overflow: hidden;
@@ -476,7 +515,9 @@
 
     .music-progress-bar {
         height: 100%;
-        background: linear-gradient(90deg, #d63384 0%, #ff6b9d 100%);
+        background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%);
+        background-size: 200% 100%;
+        animation: progressGlow 2s ease-in-out infinite;
         border-radius: 2px;
         width: 0%;
         transition: width 0.1s linear;
@@ -493,7 +534,7 @@
         height: 8px;
         background: #d63384;
         border-radius: 50%;
-        box-shadow: 0 2px 5px rgba(214, 51, 132, 0.5);
+        box-shadow: 0 2px 5px rgba(139, 92, 246, 0.5);
     }
 
     .volume-control {
@@ -505,7 +546,7 @@
     .volume-slider {
         width: 80px;
         height: 4px;
-        background: rgba(214, 51, 132, 0.2);
+        background: rgba(139, 92, 246, 0.2);
         border-radius: 2px;
         outline: none;
         -webkit-appearance: none;
@@ -602,7 +643,9 @@
         right: 20px;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+        background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+        background-size: 200% 200%;
+        animation: shimmer 3s ease-in-out infinite;
         border-radius: 50%;
         border: none;
         color: white;
@@ -611,7 +654,7 @@
         display: none;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
         transition: all 0.3s ease;
         z-index: 999;
     }
@@ -622,7 +665,7 @@
 
     .scroll-top:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(214, 51, 132, 0.5);
+        box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
     }
 
     @media (max-width: 768px) {
@@ -834,7 +877,7 @@
     /* Touch optimizations */
     @media (hover: none) and (pointer: coarse) {
         .gallery-item {
-            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.2);
+            -webkit-tap-highlight-color: rgba(139, 92, 246, 0.2);
             touch-action: manipulation;
         }
 
@@ -843,7 +886,7 @@
         }
 
         .play-btn {
-            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.3);
+            -webkit-tap-highlight-color: rgba(139, 92, 246, 0.3);
             touch-action: manipulation;
         }
 
@@ -852,7 +895,7 @@
         }
 
         .album-cover {
-            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.2);
+            -webkit-tap-highlight-color: rgba(139, 92, 246, 0.2);
             touch-action: manipulation;
         }
 
@@ -861,7 +904,7 @@
         }
 
         .memory-card {
-            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.1);
+            -webkit-tap-highlight-color: rgba(139, 92, 246, 0.1);
             touch-action: manipulation;
         }
 
@@ -870,7 +913,7 @@
         }
 
         .scroll-top {
-            -webkit-tap-highlight-color: rgba(214, 51, 132, 0.3);
+            -webkit-tap-highlight-color: rgba(139, 92, 246, 0.3);
             touch-action: manipulation;
         }
 
@@ -952,16 +995,16 @@
         padding: 40px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 240, 246, 0.9) 100%);
         border-radius: 25px;
-        box-shadow: 0 10px 40px rgba(214, 51, 132, 0.15);
+        box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15);
         text-align: center;
         animation: fadeInUp 1s ease-out 0.3s backwards;
-        border: 2px solid rgba(214, 51, 132, 0.1);
+        border: 2px solid rgba(139, 92, 246, 0.1);
     }
 
     .intro-section h2 {
         font-family: "Dancing Script", cursive;
         font-size: 36px;
-        color: #d63384;
+        color: #8b5cf6;
         margin-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
@@ -977,17 +1020,17 @@
         margin: 60px auto;
         max-width: 1000px;
         padding: 50px 30px;
-        background: linear-gradient(135deg, #fff0f6 0%, #ffeef7 100%);
+        background: linear-gradient(135deg, #f5f3ff 0%, #e9d5ff 100%);
         border-radius: 30px;
-        box-shadow: 0 15px 50px rgba(214, 51, 132, 0.2);
+        box-shadow: 0 15px 50px rgba(139, 92, 246, 0.2);
         animation: fadeIn 1.2s ease-out 0.6s backwards;
-        border: 2px solid rgba(214, 51, 132, 0.15);
+        border: 2px solid rgba(139, 92, 246, 0.15);
     }
 
     .memories-section h2 {
         font-family: "Dancing Script", cursive;
         font-size: 42px;
-        color: #d63384;
+        color: #8b5cf6;
         text-align: center;
         margin-bottom: 40px;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -1004,9 +1047,9 @@
         background: white;
         padding: 30px;
         border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(214, 51, 132, 0.15);
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 2px solid rgba(214, 51, 132, 0.1);
+        border: 2px solid rgba(139, 92, 246, 0.1);
         animation: fadeInUp 0.8s ease-out backwards;
     }
 
@@ -1016,13 +1059,13 @@
 
     .memory-card:hover {
         transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 40px rgba(214, 51, 132, 0.3);
-        border-color: rgba(214, 51, 132, 0.3);
+        box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+        border-color: rgba(139, 92, 246, 0.3);
     }
 
     .memory-card h3 {
         font-size: 24px;
-        color: #d63384;
+        color: #8b5cf6;
         margin-bottom: 15px;
         font-weight: 600;
     }
@@ -1037,12 +1080,12 @@
         margin: 60px auto;
         max-width: 900px;
         padding: 50px 40px;
-        background: linear-gradient(135deg, #ffffff 0%, #fff0f6 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
         border-radius: 30px;
-        box-shadow: 0 15px 50px rgba(214, 51, 132, 0.25);
+        box-shadow: 0 15px 50px rgba(139, 92, 246, 0.25);
         text-align: center;
         animation: fadeIn 1.4s ease-out 0.9s backwards;
-        border: 3px solid rgba(214, 51, 132, 0.2);
+        border: 3px solid rgba(139, 92, 246, 0.2);
         position: relative;
         overflow: hidden;
     }
@@ -1054,14 +1097,14 @@
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(214, 51, 132, 0.08) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
         animation: rotate 25s linear infinite;
     }
 
     .apology-section h2 {
         font-family: "Dancing Script", cursive;
         font-size: 44px;
-        color: #d63384;
+        color: #8b5cf6;
         margin-bottom: 30px;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         position: relative;
@@ -1079,7 +1122,7 @@
 
     .apology-section .apology-text:last-child {
         font-size: 24px;
-        color: #d63384;
+        color: #8b5cf6;
         font-weight: 600;
         margin-top: 30px;
     }
@@ -1090,15 +1133,15 @@
         padding: 45px;
         background: linear-gradient(135deg, rgba(255, 240, 246, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
         border-radius: 25px;
-        box-shadow: 0 12px 45px rgba(214, 51, 132, 0.2);
+        box-shadow: 0 12px 45px rgba(139, 92, 246, 0.2);
         animation: fadeInUp 1s ease-out 1.2s backwards;
-        border: 2px solid rgba(214, 51, 132, 0.15);
+        border: 2px solid rgba(139, 92, 246, 0.15);
     }
 
     .wishes-section h2 {
         font-family: "Dancing Script", cursive;
         font-size: 38px;
-        color: #d63384;
+        color: #8b5cf6;
         text-align: center;
         margin-bottom: 30px;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -1147,12 +1190,13 @@
         margin: 80px auto;
         max-width: 700px;
         padding: 50px;
-        background: linear-gradient(135deg, #d63384 0%, #ff6b9d 100%);
+        background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%);
+        background-size: 200% 200%;
+        animation: fadeIn 1.6s ease-out 1.7s backwards, gradientShift 6s ease infinite;
         border-radius: 30px;
-        box-shadow: 0 15px 50px rgba(214, 51, 132, 0.4);
+        box-shadow: 0 15px 50px rgba(139, 92, 246, 0.4);
         text-align: center;
         color: white;
-        animation: fadeIn 1.6s ease-out 1.7s backwards;
         position: relative;
         overflow: hidden;
     }
